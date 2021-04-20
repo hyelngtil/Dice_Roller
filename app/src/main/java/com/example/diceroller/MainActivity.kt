@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     //  Displays the resultText(textView) of the rolled dice
-        rollButton.setOnClickListener { rollDice() }
+        //rollButton.setOnClickListener { rollDice() }
     }
 
     //  creates 2 dice object and a text for the result of rolled dice
