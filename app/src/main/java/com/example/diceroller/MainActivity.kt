@@ -16,15 +16,19 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Rolled!", Toast.LENGTH_SHORT).show()
         }
 
-    //  Displays the resultText of the rolled dice
+    //  Displays the resultText(textView) of the rolled dice
         rollButton.setOnClickListener { rollDice() }
     }
 
-    //  creates a text for the result of rolled dice
+    //  creates 2 dice object and a text for the result of rolled dice
     private fun rollDice() {
-        val myDice = Dice(6)
+        val my6Dice = Dice(6)
+        val my8Dice = Dice(8)
+
         val resultTextView: TextView = findViewById(R.id.textView)
-        resultTextView.text = myDice.roll().toString()
+        val resultTextView2: TextView = findViewById(R.id.textView2)
+        resultTextView.text = my6Dice.roll().toString()
+        resultTextView2.text = my8Dice.roll().toString()
     }
 
 }
